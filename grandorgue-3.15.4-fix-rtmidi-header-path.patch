@@ -1,0 +1,36 @@
+diff -rupN grandorgue-3.15.4-1.old/src/grandorgue/midi/ports/GOMidiRtInPort.h grandorgue-3.15.4-1/src/grandorgue/midi/ports/GOMidiRtInPort.h
+--- grandorgue-3.15.4-1.old/src/grandorgue/midi/ports/GOMidiRtInPort.h	2024-12-20 20:20:47.000000000 +0100
++++ grandorgue-3.15.4-1/src/grandorgue/midi/ports/GOMidiRtInPort.h	2025-07-29 09:29:00.284861198 +0200
+@@ -9,7 +9,7 @@
+ #define GOMIDIRTINPORT_H
+ 
+ #include "GOMidiInPort.h"
+-#include "RtMidi.h"
++#include "rtmidi/RtMidi.h"
+ 
+ class GOMidiRtInPort : public GOMidiInPort {
+ protected:
+diff -rupN grandorgue-3.15.4-1.old/src/grandorgue/midi/ports/GOMidiRtOutPort.h grandorgue-3.15.4-1/src/grandorgue/midi/ports/GOMidiRtOutPort.h
+--- grandorgue-3.15.4-1.old/src/grandorgue/midi/ports/GOMidiRtOutPort.h	2024-12-20 20:20:47.000000000 +0100
++++ grandorgue-3.15.4-1/src/grandorgue/midi/ports/GOMidiRtOutPort.h	2025-07-29 09:29:07.860931739 +0200
+@@ -9,7 +9,7 @@
+ #define GOMIDIRTOUTPORT_H
+ 
+ #include "GOMidiOutPort.h"
+-#include "RtMidi.h"
++#include "rtmidi/RtMidi.h"
+ 
+ class GOMidiRtOutPort : public GOMidiOutPort {
+ protected:
+diff -rupN grandorgue-3.15.4-1.old/src/grandorgue/midi/ports/GOMidiRtPortFactory.h grandorgue-3.15.4-1/src/grandorgue/midi/ports/GOMidiRtPortFactory.h
+--- grandorgue-3.15.4-1.old/src/grandorgue/midi/ports/GOMidiRtPortFactory.h	2024-12-20 20:20:47.000000000 +0100
++++ grandorgue-3.15.4-1/src/grandorgue/midi/ports/GOMidiRtPortFactory.h	2025-07-29 09:29:18.439184228 +0200
+@@ -6,7 +6,7 @@
+ #include <map>
+ 
+ #include "GOMidiPort.h"
+-#include "RtMidi.h"
++#include "rtmidi/RtMidi.h"
+ #include "config/GOPortsConfig.h"
+ #include "ptrvector.h"
+ 
