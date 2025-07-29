@@ -10,6 +10,7 @@ Group:	Sound
 Url:		https://github.com/GrandOrgue/grandorgue
 Source0:	https://github.com/GrandOrgue/grandorgue/archive/%{version}-1.tar.gz?/%{name}-%{version}-1.tar.gz
 Patch0:		grandorgue-3.15.4-fix-rtmidi-header-path.patch
+Patch1:		grandorgue-3.15.4-fix-missing-header.patch
 BuildRequires:	cmake
 BuildRequires:	docbook-style-xsl
 BuildRequires:	docbook-style-xsl-ns
