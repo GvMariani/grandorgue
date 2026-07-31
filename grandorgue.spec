@@ -3,14 +3,14 @@
 
 Summary:	Virtual Pipe Organ Software
 Name:	grandorgue
-Version:	3.15.4
+Version:	3.17.2
 Release:	1
 License:	GPLv2+
 Group:	Sound
 Url:		https://github.com/GrandOrgue/grandorgue
 Source0:	https://github.com/GrandOrgue/grandorgue/archive/%{version}-1.tar.gz?/%{name}-%{version}-1.tar.gz
-Patch0:		grandorgue-3.15.4-fix-rtmidi-header-path.patch
-Patch1:		grandorgue-3.15.4-fix-missing-header.patch
+# dropped (no longer applies): Patch0:		grandorgue-3.17.2-fix-rtmidi-header-path.patch
+# dropped (no longer applies): Patch1:		grandorgue-3.17.2-fix-missing-header.patch
 BuildRequires:	cmake
 BuildRequires:	docbook-style-xsl
 BuildRequires:	docbook-style-xsl-ns
@@ -76,7 +76,7 @@ Library for %{name} application.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-%{version}-1
+%autosetup -p1 -n grandorgue-3.17.2-1
 
 
 %build
