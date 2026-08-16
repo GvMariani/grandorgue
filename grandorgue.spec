@@ -3,7 +3,7 @@
 
 Summary:	Virtual Pipe Organ Software
 Name:	grandorgue
-Version:	3.17.2
+Version:	3.17.3
 Release:	1
 License:	GPLv2+
 Group:	Sound
