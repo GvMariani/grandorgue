@@ -9,13 +9,15 @@ License:	GPLv2+
 Group:	Sound
 Url:		https://github.com/GrandOrgue/grandorgue
 Source0:	https://github.com/GrandOrgue/grandorgue/archive/%{version}-1.tar.gz?/%{name}-%{version}-1.tar.gz
-# dropped (no longer applies): Patch0:		grandorgue-3.17.2-fix-rtmidi-header-path.patch
-# dropped (no longer applies): Patch1:		grandorgue-3.17.2-fix-missing-header.patch
+# This one is needed: rediff it when updating if does not apply
+Patch0:		grandorgue-3.17.3-fix-rtmidi-header-path.patch
 BuildRequires:	cmake
+BuildRequires:	curl
 BuildRequires:	docbook-style-xsl
 BuildRequires:	docbook-style-xsl-ns
 BuildRequires:	gettext
 BuildRequires:	imagemagick
+BuildRequires:	make
 BuildRequires:	po4a
 BuildRequires:	xsltproc
 BuildRequires:	libzita-convolver-devel
@@ -76,7 +78,7 @@ Library for %{name} application.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n grandorgue-3.17.2-1
+%autosetup -p1 -n %{name}-%{version}-1
 
 
 %build
@@ -90,12 +92,13 @@ Library for %{name} application.
 	-DUSE_INTERNAL_PORTAUDIO=OFF	\
 	-DUSE_INTERNAL_RTAUDIO=OFF	\
 	-DUSE_INTERNAL_ZITACONVOLVER=OFF
-%make
+
+%make_build
 
 
 
 
 %install
-%makeinstall_std -C build
+%make_install -C build
 
 %find_lang %{oname}
